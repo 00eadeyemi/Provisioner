@@ -1,9 +1,0 @@
-function running() {
-    if [ "$#" -ne 1 ]; then 
-        echo "Please enter a process name"
-        return
-    fi
-    ps aux | head -n 1
-    ps aux | grep $1 | grep -v grep
-}
-
