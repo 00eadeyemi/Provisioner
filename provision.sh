@@ -25,6 +25,7 @@ function run(){
     brew cask install vagrant
     brew cask install utorrent
     brew cask install spotify
+    brew cask install phpstorm
 
     # Set a nice vim config...
     cat assets/vim.cfg >> ~/.vimrc
