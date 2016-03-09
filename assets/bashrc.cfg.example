@@ -1,4 +1,4 @@
-alias reload="source ~/.bashrc && clear"
+alias reload="source ~/.bash_profile && clear"
 alias ls="ls -las"
 
 
