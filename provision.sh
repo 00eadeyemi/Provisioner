@@ -9,7 +9,6 @@ function run(){
     brew install caskroom/cask/brew-cask
     brew cask install git
 
-
     # Agree to xcode licenses otherwise /0 :s
     sudo xcodebuild -license
 
@@ -46,13 +45,6 @@ function usage(){
     printf "\n--copy-current     copies the current settings to the cfg files in /assets/*.cfg, for use in re-provisioning later."
     printf "\n--run              runs the provisioning script to set bashrc, vimrc and runs the installers set in provision.sh run()\n\n"
 }
-
-if [[ $EUID -ne 0 ]]
-then
-    echo "This provisioner requires root access."
-    exit 1
-    usage
-fi
 
 if [ $# -eq 0 ]
     then
