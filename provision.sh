@@ -16,6 +16,7 @@ function run(){
     brew install wget
     brew install ruby
     brew install node
+    brew install ansible
 
     # Install some stuff...
     brew cask install google-chrome
