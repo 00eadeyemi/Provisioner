@@ -9,7 +9,6 @@ function run(){
     brew install caskroom/cask/brew-cask
     brew cask install git
 
-
     # Agree to xcode licenses otherwise /0 :s
     sudo xcodebuild -license
 
@@ -31,12 +30,12 @@ function run(){
     cat assets/vim.cfg >> ~/.vimrc
 
     # Set a nice bash config
-    cat assets/bashrc.cfg >> ~/.bashrc
+    cat assets/bash_profile.cfg >> ~/.bash_profile
 }
 
 function copy_settings(){
     cp ~/.vimrc ./assets/vim.cfg
-    cp ~/.bashrc ./assets/bashrc.cfg
+    cp ~/.bash_profile ./assets/bash_profile.cfg
 }
 
 function usage(){
@@ -44,15 +43,8 @@ function usage(){
     printf "\nUSAGE:\n $0 (--copy-current | --write-settings)"
     printf "\n---------------------------------------------"
     printf "\n--copy-current     copies the current settings to the cfg files in /assets/*.cfg, for use in re-provisioning later."
-    printf "\n--run              runs the provisioning script to set bashrc, vimrc and runs the installers set in provision.sh run()\n\n"
+    printf "\n--run              runs the provisioning script to set bash_profile, vimrc and runs the installers set in provision.sh run()\n\n"
 }
-
-if [[ $EUID -ne 0 ]]
-then
-    echo "This provisioner requires root access."
-    exit 1
-    usage
-fi
 
 if [ $# -eq 0 ]
     then
