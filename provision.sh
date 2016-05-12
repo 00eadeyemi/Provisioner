@@ -19,6 +19,7 @@ function run(){
 
     # Install some stuff...
     brew cask install google-chrome
+    brew cask install github-desktop
     brew cask install atom
     brew cask install charles
     brew cask install virtualbox
