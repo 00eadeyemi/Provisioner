@@ -21,6 +21,7 @@ function run(){
     brew cask install google-chrome
     brew cask install github-desktop
     brew cask install atom
+    brew cask install sequel-pro
     brew cask install charles
     brew cask install virtualbox
     brew cask install vagrant
