@@ -16,11 +16,13 @@ function run(){
     brew install wget
     brew install ruby
     brew install node
+    brew install ansible
 
     # Install some stuff...
     brew cask install google-chrome
     brew cask install github-desktop
     brew cask install atom
+    brew cask install sequel-pro
     brew cask install charles
     brew cask install virtualbox
     brew cask install vagrant
