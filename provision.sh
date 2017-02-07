@@ -3,14 +3,11 @@ function run(){
     defaults write com.apple.finder CreateDesktop -bool false && killall Finder
 
     # Install brew
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     # Install GIT. Should avoid any issues if a fresh install with no xcode-tools
     brew install caskroom/cask/brew-cask
     brew cask install git
-
-    # Agree to xcode licenses otherwise /0 :s
-    sudo xcodebuild -license
 
     # Set up brew tools.
     brew install wget
@@ -31,10 +28,10 @@ function run(){
     brew cask install phpstorm
 
     # Set a nice vim config...
-    cat assets/vim.cfg >> ~/.vimrc
+#     cat assets/vim.cfg >> ~/.vimrc
 
     # Set a nice bash config
-    cat assets/bash_profile.cfg >> ~/.bash_profile
+#     cat assets/bash_profile.cfg >> ~/.bash_profile
 }
 
 function copy_settings(){
